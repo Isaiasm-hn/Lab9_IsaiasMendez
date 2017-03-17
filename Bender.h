@@ -8,23 +8,34 @@ class Bender{
 	private:
 		string nombre;
 		int hp;
-		int ataque_reg;
-		int ataque_esp;
+		int fuerza;
+		int ataque;
+		int suerte;
 	public:
 
-		virtual void setNombre(string);
-		virtual string getNombre();
+		 void setNombre(string);
+		 string getNombre();
 
-		virtual void setHP(int);
-		virtual int getHP();
+		 void setHP(int);
+		 int getHP();
 
-		virtual int AtaqueEspecial(Bender*);
-		virtual int AtaqueRegular(Bender*)
+		 void setFuerza(int);
+		 int getFuerza();
+
+		 void setSuerte(int);
+		 int getSuerte();
+
+		 void setAtaque(int);
+		 int getAtaque();
 		
-		
+		 virtual int AtaqueEspecial(Bender*)=0;
+		 virtual int AtaqueRegular(Bender*)=0;
+		 virtual int Defensa(Bender*)=0;
+		 virtual int Ofensa(Bender*)=0;
 
 
-		Bender();
-		virtual ~Bender();
+
+		 Bender(string,int,int,int,int);
+		 virtual ~Bender();
 	
 };
