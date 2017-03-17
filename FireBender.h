@@ -1,5 +1,6 @@
 #include "Bender.h"
-
+#ifndef FIREBENDER_H
+#define FIREBENDER_H
 class FireBender:public Bender{
 public:
 
@@ -12,3 +13,4 @@ public:
 	~FireBender();
 	
 };
+#endif

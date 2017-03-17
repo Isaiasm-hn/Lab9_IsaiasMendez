@@ -43,7 +43,7 @@ int AirBender::Defensa(Bender* b){
 }
 
 int AirBender::Ofensa(Bender* b){
-	
+	return -1;
 }
 
 AirBender::~AirBender(){
