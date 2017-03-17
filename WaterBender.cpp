@@ -1,7 +1,7 @@
 #include "WaterBender.h"
 #include "FireBender.h"
 
-WaterBender::WaterBender(string pNombre,int pHP,int pFuerza, int pAtaque, int pSuerte):Bender(pNombre,pHP,pFuerza,pAtaque,pSuerte){
+WaterBender::WaterBender(string pNombre,int pHP,int pFuerza, int pAtaque, int pSuerte):Bender(pNombre,pHP,0,pAtaque,pSuerte){
 
 }
 

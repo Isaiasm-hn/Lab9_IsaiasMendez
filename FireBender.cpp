@@ -2,7 +2,7 @@
 #include "AirBender.h"
 
 
-FireBender::FireBender(string pNombre,int pHP,int pFuerza, int pAtaque, int pSuerte):Bender(pNombre,pHP,pFuerza,pAtaque,pSuerte){
+FireBender::FireBender(string pNombre,int pHP,int pFuerza, int pAtaque, int pSuerte):Bender(pNombre,pHP,0,pAtaque,pSuerte){
 
 }
 
@@ -14,7 +14,7 @@ int FireBender::AtaqueEspecial(Bender* b){
 	if(smashHit()){
 		smash=this->ataque*0.50;
 	}
-	if(typeid(*b)==typeid(FireBender)){
+	if(typeid(*b)==typeid(AirBender)){
 		b->setHP(vida-((ataque+smash)-defensa));
 		atk=(this->ataque*0.15)+ataque+smash;
 	}else{

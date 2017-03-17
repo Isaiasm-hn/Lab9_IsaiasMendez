@@ -31,9 +31,9 @@ int tipoBender(){
 int main(){
 	vector<Bender*> benders;
 	benders.push_back(new EarthBender("ElMaracucho",500,0,60,6));
-	benders.push_back(new AirBender("ElGuajiro",500,0,60,6));
-	benders.push_back(new WaterBender("Rambo",500,0,60,6));
-	benders.push_back(new FireBender("Batman",500,0,60,6));
+	benders.push_back(new AirBender("ElGuajiro",500,0,60,5));
+	benders.push_back(new WaterBender("Rambo",500,0,60,4));
+	benders.push_back(new FireBender("Batman",500,0,60,10));
 
 	int c;
 	do{
@@ -49,10 +49,11 @@ int main(){
 				Bender* p2=benders.at(1);
 				while(win){
 					if(turno=1){
-						
+						cout<<"Player 1";
 
 						turno=2;
 					}else{
+						
 
 
 						turno=1;
