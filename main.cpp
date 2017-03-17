@@ -53,7 +53,7 @@ int main(){
 
 						turno=2;
 					}else{
-						
+						cout<<"Player 2";
 
 
 						turno=1;
