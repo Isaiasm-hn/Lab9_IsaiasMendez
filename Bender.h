@@ -39,6 +39,7 @@ class Bender{
 		 virtual int AtaqueRegular(Bender*)=0;
 		 virtual int Defensa(Bender*)=0;
 		 virtual int Ofensa(Bender*)=0;
+		 
 
 
 

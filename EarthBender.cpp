@@ -1,7 +1,7 @@
 #include "EarthBender.h"
 #include "WaterBender.h"
 
-EarthBender::EarthBender(string pNombre,int pHP,int pFuerza, int pAtaque, int pSuerte):Bender(pNombre,pHP,pFuerza,pAtaque,pSuerte){
+EarthBender::EarthBender(string pNombre,int pHP,int pFuerza, int pAtaque, int pSuerte):Bender(pNombre,pHP,0,pAtaque,pSuerte){
 
 }
 

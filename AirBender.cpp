@@ -1,7 +1,7 @@
 #include "AirBender.h"
 #include "EarthBender.h"
 
-AirBender::AirBender(string pNombre,int pHP,int pFuerza, int pAtaque, int pSuerte):Bender(pNombre,pHP,pFuerza,pAtaque,pSuerte){
+AirBender::AirBender(string pNombre,int pHP,int pFuerza, int pAtaque, int pSuerte):Bender(pNombre,pHP,0,pAtaque,pSuerte){
 
 }
 
