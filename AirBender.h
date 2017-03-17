@@ -1,14 +1,15 @@
-#include <Bender>
-
-class AirBender{
+#include "Bender.h"
+#ifndef AIRBENDER_H
+#define AIRBENDER_H
+class AirBender: public Bender{
 	public:
-		AirBender(string,int,int,int);
-
-		int AtaqueEspecial(Bender*)=0;
-		int AtaqueRegular(Bender*)=0;
-		int Defensa(Bender*)=0;
-		int Ofensa(Bender*)=0;
+		AirBender(string,int,int,int,int);
+		int AtaqueEspecial(Bender*);
+		int AtaqueRegular(Bender*);
+		int Defensa(Bender*);
+		int Ofensa(Bender*);
 		
 		~AirBender();
 	
 };
+#endif

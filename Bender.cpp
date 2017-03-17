@@ -1,5 +1,10 @@
 #include "Bender.h"
 
+using namespace std;
+
+Bender::Bender(){
+
+}
 
 Bender::Bender(string pNombre,int pHP,int pFuerza, int pAtaque, int pSuerte){
 	this->nombre=pNombre;	
@@ -30,7 +35,7 @@ void Bender::setFuerza(int pFuerza){
 }
 
 int Bender::getFuerza(){
-	return fuerza:
+	return fuerza;
 }
 
 void Bender::setSuerte(int pSuerte){
@@ -65,7 +70,9 @@ int Bender::Ofensa(Bender* h){
 	return 0;
 }
 
-
+Bender::~Bender(){
+	
+}
 
 
 

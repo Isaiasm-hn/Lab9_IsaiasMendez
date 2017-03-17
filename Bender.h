@@ -1,9 +1,12 @@
 #include <iostream>
 #include <string>
+#include <typeinfo>
+
 
 using namespace std;
 
-
+#ifndef BENDER_H
+#define BENDER_H
 class Bender{
 	private:
 		string nombre;
@@ -12,7 +15,8 @@ class Bender{
 		int ataque;
 		int suerte;
 	public:
-
+		 Bender();
+		 Bender(string,int,int,int,int);
 		 void setNombre(string);
 		 string getNombre();
 
@@ -35,7 +39,8 @@ class Bender{
 
 
 
-		 Bender(string,int,int,int,int);
+		 
 		 virtual ~Bender();
 	
 };
+#endif
