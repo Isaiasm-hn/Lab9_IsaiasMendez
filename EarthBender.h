@@ -10,6 +10,7 @@ class EarthBender:public Bender{
 		int AtaqueRegular(Bender*);
 		int Defensa(Bender*);
 		int Ofensa(Bender*);
+		
 		~EarthBender();
 	
 };

@@ -1,6 +1,8 @@
 #include <iostream>
 #include <string>
 #include <typeinfo>
+#include <stdlib.h>
+#include <time.h>
 
 
 using namespace std;
@@ -8,7 +10,7 @@ using namespace std;
 #ifndef BENDER_H
 #define BENDER_H
 class Bender{
-	private:
+	protected:
 		string nombre;
 		int hp;
 		int fuerza;
@@ -31,8 +33,9 @@ class Bender{
 
 		 void setAtaque(int);
 		 int getAtaque();
-		
+		 bool smashHit();
 		 virtual int AtaqueEspecial(Bender*)=0;
+		  
 		 virtual int AtaqueRegular(Bender*)=0;
 		 virtual int Defensa(Bender*)=0;
 		 virtual int Ofensa(Bender*)=0;

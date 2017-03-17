@@ -5,6 +5,30 @@ using namespace std;
 Bender::Bender(){
 
 }
+bool Bender::smashHit(){
+	int x;
+	srand(time(NULL));
+	
+
+	if(this->suerte>=0 && this->suerte<=5){
+		x=rand() % 1000 + 1;
+		if(x==50){
+			return true;
+		}
+	}else if(this->suerte>6 && this->suerte<10){
+		x=rand() % 100 + 1;
+		if(x%5==0){
+			return true;
+		}
+	}else if(this->suerte==10){
+		x=rand() % 10 + 1;
+		if(x % 3==0){
+			return true;
+		}
+	}else{
+		return false;
+	}
+}
 
 Bender::Bender(string pNombre,int pHP,int pFuerza, int pAtaque, int pSuerte){
 	this->nombre=pNombre;	

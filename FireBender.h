@@ -8,6 +8,7 @@ public:
 	int AtaqueRegular(Bender*);
 	int Defensa(Bender*);
 	int Ofensa(Bender*);
+	
 	~FireBender();
 	
 };
