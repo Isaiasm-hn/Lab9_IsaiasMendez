@@ -30,10 +30,10 @@ int tipoBender(){
 
 int main(){
 	vector<Bender*> benders;
-	benders.push_back(new EarthBender("ElMaracucho",500,0,60,6));
-	benders.push_back(new AirBender("ElGuajiro",500,0,60,5));
+	benders.push_back(new EarthBender("ElMaracucho",400,0,15,6));
+	benders.push_back(new AirBender("ElGuajiro",600,0,20,5));
 	benders.push_back(new WaterBender("Rambo",500,0,60,4));
-	benders.push_back(new FireBender("Batman",500,0,60,10));
+	benders.push_back(new FireBender("Batman",800,0,60,10));
 
 	int c;
 	do{
@@ -43,18 +43,72 @@ int main(){
 		cin>>c;	  
 		switch(c){
 			case 1:{
-				bool win;
-				int turno;
+				bool win=true;
+				int turno=1;
 				Bender* p1=benders.at(0);
 				Bender* p2=benders.at(1);
 				while(win){
 					if(turno=1){
-						cout<<"Player 1";
-
+						int opc_p1;
+						cout<<"Player 1\n";
+						cout<<"1) Ataque especia\n"<<
+							  "2) Ataque Regular\n"<<
+							  "3) correr \n"<<
+							  "Ingrese Opcion: ";
+						cin>>opc_p1;
+						switch(opc_p1){
+							case 1:{
+								cout<<"Ataque Especial\n";
+								cout<<p1->AtaqueEspecial(p2)<<"\n";
+								
+								break;
+							}
+							case 2:{
+								cout<<"Ataque Especial\n";
+								cout<<p1->AtaqueRegular(p2)<<"\n";
+								break;
+							}case 3:{
+								cout<<"Gano el player 2\n";
+								win=false;
+								break;
+							}
+						}
+						if(p2->getHP()<=0){
+							cout<<"Gano el player 1\n";
+							win=false;
+						}
+						cout<<endl;
 						turno=2;
 					}else{
-						cout<<"Player 2";
-
+						int opc_p2;
+						cout<<"Player 2\n";
+						cout<<"1) Ataque especial\n"<<
+							  "2) Ataque Regular\n"<<
+							  "3) correr \n"<<
+							  "Ingrese Opcion: ";
+						cin>>opc_p2;
+						switch(opc_p2){
+							case 1:{
+								cout<<"Ataque Especial\n";
+								cout<<p2->AtaqueEspecial(p1)<<"\n";
+								
+								break;
+							}
+							case 2:{
+								cout<<"Ataque Especial\n";
+								cout<<p2->AtaqueRegular(p1)<<"\n";
+								break;
+							}case 3:{
+								cout<<"Gano el player 1\n";
+								win=false;
+								break;
+							}
+						}
+						if(p1->getHP()<=0){
+							cout<<"Gano el player 1\n";
+							win=false;
+						}
+						cout<<endl;
 
 						turno=1;
 					}
